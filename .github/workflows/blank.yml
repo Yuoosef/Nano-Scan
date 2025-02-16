@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Nano-Scan | الأشعة المنزلية</title>
+  <meta name="description" content="Nano-Scan هو أول مركز متخصص في تقديم خدمات الأشعة المنزلية بأحدث التقنيات لتشخيص دقيق وسريع في بيئة آمنة ومريحة.">
+  <meta name="keywords" content="Nano-Scan, أشعة منزلية, X-Ray ديجيتال, سونار, دوبلكس, إيكو, تشخيص, صحة">
+  <link rel="icon" href="https://via.placeholder.com/32?text=N" type="image/png">
+  <!-- استيراد خط "Cairo" من Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;600&display=swap" rel="stylesheet">
+  <style>
+    /* إعادة تعيين القيم الافتراضية */
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+    body {
+      font-family: 'Cairo', sans-serif;
+      background-color: #f2f4f8;
+      color: #333;
+      direction: rtl;
+      line-height: 1.6;
+    }
+    header {
+      background: linear-gradient(135deg, #00509e, #0073cf);
+      color: #fff;
+      padding: 1.5rem 0;
+      text-align: center;
+    }
+    header h1 {
+      font-size: 2.5rem;
+      margin-bottom: 0.5rem;
+    }
+    header p {
+      font-size: 1.2rem;
+      opacity: 0.9;
+    }
+    nav {
+      background-color: #fff;
+      box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+      padding: 0.8rem 0;
+      text-align: center;
+      position: sticky;
+      top: 0;
+      z-index: 100;
+    }
+    nav ul {
+      list-style: none;
+      display: inline-flex;
+    }
+    nav li {
+      margin: 0 1.2rem;
+    }
+    nav a {
+      color: #00509e;
+      text-decoration: none;
+      font-size: 1rem;
+      font-weight: 600;
+      transition: color 0.3s;
+    }
+    nav a:hover {
+      color: #0073cf;
+    }
+    main {
+      max-width: 1200px;
+      margin: 2rem auto;
+      padding: 0 1rem;
+    }
+    section {
+      margin-bottom: 3rem;
+      background: #fff;
+      padding: 2rem;
+      border-radius: 8px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+    }
+    section h2 {
+      margin-bottom: 1rem;
+      font-size: 2rem;
+      color: #00509e;
+      border-bottom: 2px solid #0073cf;
+      display: inline-block;
+      padding-bottom: 0.3rem;
+    }
+    section p {
+      margin-bottom: 1rem;
+      font-size: 1.1rem;
+    }
+    .hero-img, .about-img, .service-img {
+      width: 100%;
+      border-radius: 8px;
+      margin-top: 1rem;
+      /* تحميل كسول للصور لتحسين الأداء */
+      loading: lazy;
+    }
+    .services {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1.5rem;
+      justify-content: space-between;
+    }
+    .service {
+      flex: 1 1 calc(50% - 1rem);
+      background: #f9fafb;
+      padding: 1.5rem;
+      border-radius: 8px;
+      text-align: center;
+      transition: transform 0.3s, box-shadow 0.3s;
+    }
+    .service:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    }
+    .service img {
+      width: 100%;
+      height: auto;
+      border-radius: 8px;
+      margin-top: 1rem;
+      loading: lazy;
+    }
+    form {
+      max-width: 500px;
+      margin: auto;
+    }
+    form label {
+      display: block;
+      margin-bottom: 0.5rem;
+      font-weight: 600;
+    }
+    form input, form button {
+      width: 100%;
+      padding: 0.8rem;
+      margin-bottom: 1rem;
+      border-radius: 5px;
+      border: 1px solid #ccc;
+      font-size: 1rem;
+    }
+    form button {
+      background-color: #00509e;
+      color: #fff;
+      border: none;
+      cursor: pointer;
+      transition: background 0.3s;
+    }
+    form button:hover {
+      background-color: #0073cf;
+    }
+    footer {
+      background-color: #00509e;
+      color: #fff;
+      text-align: center;
+      padding: 1rem 0;
+      font-size: 0.9rem;
+    }
+    @media (max-width: 768px) {
+      .service {
+        flex: 1 1 100%;
+      }
+      nav li {
+        margin: 0 0.6rem;
+      }
+      nav a {
+        font-size: 0.9rem;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Nano-Scan</h1>
+    <p>الأشعة المنزلية بأحدث التقنيات</p>
+  </header>
+
+  <nav>
+    <ul>
+      <li><a href="#home" aria-label="الرئيسية">الرئيسية</a></li>
+      <li><a href="#about" aria-label="من نحن">من نحن</a></li>
+      <li><a href="#services" aria-label="خدماتنا">خدماتنا</a></li>
+      <li><a href="#appointment" aria-label="حجز موعد">حجز موعد</a></li>
+      <li><a href="#contact" aria-label="اتصل بنا">اتصل بنا</a></li>
+    </ul>
+  </nav>
+
+  <main class="container">
+    <!-- الصفحة الرئيسية -->
+    <section id="home">
+      <h2>مرحباً بكم في Nano-Scan</h2>
+      <p>نقدم لكم خدمات الأشعة المنزلية بجودة المستشفيات لراحتكم وتشخيص دقيق وسريع في بيئة آمنة ومريحة.</p>
+      <img class="hero-img" src="https://via.placeholder.com/1200x400?text=صورة+رئيسية+حديثة" alt="صورة رئيسية لمركز Nano-Scan">
+    </section>
+
+    <!-- قسم "من نحن" -->
+    <section id="about">
+      <h2>من نحن</h2>
+      <p>يعد Nano-Scan أول مركز متخصص في تقديم خدمات الأشعة المنزلية باستخدام أحدث الأجهزة وفريق طبي من الخبراء لضمان تشخيص سريع ودقيق.</p>
+      <img class="about-img" src="https://via.placeholder.com/1000x400?text=صورة+عن+المركز+حديثة" alt="صورة عن Nano-Scan">
+    </section>
+
+    <!-- قسم "خدماتنا" -->
+    <section id="services">
+      <h2>خدماتنا</h2>
+      <div class="services">
+        <div class="service">
+          <h3>أشعة X-Ray ديجيتال</h3>
+          <p>تشخيص شامل باستخدام أحدث التقنيات الرقمية لجميع أجزاء الجسم.</p>
+          <img class="service-img" src="https://via.placeholder.com/500x300?text=X-Ray+ديجيتال" alt="أشعة X-Ray ديجيتال">
+        </div>
+        <div class="service">
+          <h3>سونار البطن والحوض</h3>
+          <p>فحص دقيق للأعضاء الداخلية للكشف المبكر عن أي مشكلات صحية.</p>
+          <img class="service-img" src="https://via.placeholder.com/500x300?text=سونار+البطن+والحوض" alt="سونار البطن والحوض">
+        </div>
+        <div class="service">
+          <h3>دوبلكس الأوردة والشرايين</h3>
+          <p>فحص شامل لتحديد التجلطات والانسدادات في الأوعية الدموية.</p>
+          <img class="service-img" src="https://via.placeholder.com/500x300?text=دوبلكس+الأوردة+والشرايين" alt="دوبلكس الأوردة والشرايين">
+        </div>
+        <div class="service">
+          <h3>إيكو على القلب</h3>
+          <p>فحص القلب بدقة للكشف المبكر عن المشاكل الصحية المحتملة.</p>
+          <img class="service-img" src="https://via.placeholder.com/500x300?text=إيكو+على+القلب" alt="إيكو على القلب">
+        </div>
+      </div>
+    </section>
+
+    <!-- قسم "حجز موعد" -->
+    <section id="appointment">
+      <h2>حجز موعد</h2>
+      <form action="#" method="post">
+        <label for="name">الاسم:</label>
+        <input type="text" id="name" name="name" required>
+        
+        <label for="phone">رقم الهاتف:</label>
+        <input type="tel" id="phone" name="phone" required>
+        
+        <label for="date">تاريخ الموعد:</label>
+        <input type="date" id="date" name="date" required>
+        
+        <button type="submit">احجز الآن</button>
+      </form>
+    </section>
+
+    <!-- قسم "اتصل بنا" -->
+    <section id="contact">
+      <h2>اتصل بنا</h2>
+      <p>للمزيد من المعلومات أو الاستفسارات، يرجى التواصل معنا عبر الهاتف أو البريد الإلكتروني.</p>
+      <p>هاتف: 0123456789 | بريد إلكتروني: info@nano-scan.com</p>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; 2025 Nano-Scan. جميع الحقوق محفوظة.</p>
+  </footer>
+</body>
+</html>
